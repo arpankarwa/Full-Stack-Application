@@ -52,8 +52,6 @@ export default function AddUser() {
                             <button type='submit' className='btn btn-outline-primary mx-3'>Submit</button>
                             <Link type='submit' to={"/"} className='btn btn-outline-danger'>Cancel</Link>
                         </form>
-                        
-                        
                     </div>
                 </div>
             </div>
