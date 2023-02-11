@@ -27,30 +27,33 @@ export default function AddUser() {
     return (
         <>
             <div className='container'>
-                <div className='row'>
-                    <div className='col-md-6 offset-md-3 border rounded p-5 mt-4 shadow'>
-                        <div className='text-center m-4'><b>Add/Register User</b></div>
+                <div className='row col-9'>
+                    <div className='col-md-6 offset-md-5 rounded-3 shadow-lg p-5 mt-4'>
+                        <div className='text-center m-4'><b><h3>Add/Register User</h3></b></div>
 
                         <form onSubmit={(e) => onSubmit(e)}>
                             <div className='mb-4'>
                                 <input type={"text"} className='form-control'
                                     name='name' placeholder='Enter Name' value={name}
-                                    onChange={(e) => onInputChange(e)} />
+                                    onChange={(e) => onInputChange(e)} required="true" />
                             </div>
 
                             <div className='mb-4'>
                                 <input type={"text"} className='form-control'
                                     name='username' placeholder='Enter Username' value={username}
-                                    onChange={(e) => onInputChange(e)} />
+                                    onChange={(e) => onInputChange(e)} required="true" />
                             </div>
 
-                            <div className='mb-3'>
+                            <div className='mb-4'>
                                 <input type={"email"} className='form-control'
                                     name='email' placeholder='Enter Email-id' value={email}
-                                    onChange={(e) => onInputChange(e)} />
+                                    onChange={(e) => onInputChange(e)} required="true" />
                             </div>
-                            <button type='submit' className='btn btn-outline-primary mx-3'>Submit</button>
-                            <Link type='submit' to={"/"} className='btn btn-outline-danger'>Cancel</Link>
+                            
+                            <div className='text-center'>
+                                <button type='submit' className='btn btn-outline-success mx-4 col-sm-3'>Submit</button>
+                                <Link type='submit' to={"/"} className='btn btn-outline-danger ms-2 me-4 col-sm-3'>Cancel</Link>
+                            </div>
                         </form>
                     </div>
                 </div>
