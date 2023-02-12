@@ -23,18 +23,17 @@ export default function EditUser() {
     const onSubmit = async (e) => {
         e.preventDefault();
         await axios.put(`http://localhost:8080/updateUser/${id}`, user);
-        // console.log("user details edited successfully");
         navigateTo("/");
     };
 
     useEffect(()=>{
         getSpecificUserData();
-    },[])
+    }, []);
 
     const getSpecificUserData = async () => {
       const result = await axios.get(`http://localhost:8080/updateUser/${id}`);
       setUser(result.data);
-    }
+    };
 
     return (
         <>
@@ -47,19 +46,19 @@ export default function EditUser() {
                             <div className='mb-4'>
                                 <input type={"text"} className='form-control'
                                     name='name' placeholder='Enter Name to Update' value={name}
-                                    onChange={(e) => onInputChange(e)} required="true" />
+                                    onChange={(e) => onInputChange(e)} required={true} />
                             </div>
 
                             <div className='mb-4'>
                                 <input type={"text"} className='form-control'
                                     name='username' placeholder='Enter UserName to Update' value={username}
-                                    onChange={(e) => onInputChange(e)} required="true" />
+                                    onChange={(e) => onInputChange(e)} required={true} />
                             </div>
 
                             <div className='mb-4'>
                                 <input type={"email"} className='form-control'
                                     name='email' placeholder='Enter Email-id to Update' value={email}
-                                    onChange={(e) => onInputChange(e)} required="true" />
+                                    onChange={(e) => onInputChange(e)} required={true} />
                             </div>
 
                             <div className='text-center'>

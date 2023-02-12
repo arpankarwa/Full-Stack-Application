@@ -20,7 +20,6 @@ export default function AddUser() {
     const onSubmit = async (e) => {
         e.preventDefault();
         await axios.post("http://localhost:8080/addUser", user);
-        // console.log("user is added successfully");
         navigateTo("/");
     };
 
@@ -35,19 +34,19 @@ export default function AddUser() {
                             <div className='mb-4'>
                                 <input type={"text"} className='form-control'
                                     name='name' placeholder='Enter Name' value={name}
-                                    onChange={(e) => onInputChange(e)} required="true" />
+                                    onChange={(e) => onInputChange(e)} required={true} />
                             </div>
 
                             <div className='mb-4'>
                                 <input type={"text"} className='form-control'
                                     name='username' placeholder='Enter Username' value={username}
-                                    onChange={(e) => onInputChange(e)} required="true" />
+                                    onChange={(e) => onInputChange(e)} required={true} />
                             </div>
 
                             <div className='mb-4'>
                                 <input type={"email"} className='form-control'
                                     name='email' placeholder='Enter Email-id' value={email}
-                                    onChange={(e) => onInputChange(e)} required="true" />
+                                    onChange={(e) => onInputChange(e)} required={true} />
                             </div>
 
                             <div className='text-center'>
