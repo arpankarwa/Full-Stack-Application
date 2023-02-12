@@ -28,7 +28,7 @@ export default function AddUser() {
         <>
             <div className='container'>
                 <div className='row col-9'>
-                    <div className='col-md-6 offset-md-5 rounded-3 shadow-lg p-5 mt-4'>
+                    <div className='bg-light col-md-6 offset-md-5 rounded-3 shadow-lg p-5 mt-4'>
                         <div className='text-center m-4'><b><h3>Add/Register User</h3></b></div>
 
                         <form onSubmit={(e) => onSubmit(e)}>
@@ -49,7 +49,7 @@ export default function AddUser() {
                                     name='email' placeholder='Enter Email-id' value={email}
                                     onChange={(e) => onInputChange(e)} required="true" />
                             </div>
-                            
+
                             <div className='text-center'>
                                 <button type='submit' className='btn btn-outline-success mx-4 col-sm-3'>Submit</button>
                                 <Link type='submit' to={"/"} className='btn btn-outline-danger ms-2 me-4 col-sm-3'>Cancel</Link>

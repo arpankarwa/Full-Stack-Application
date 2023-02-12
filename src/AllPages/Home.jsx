@@ -50,7 +50,7 @@ export default function Home() {
                     <td>{user.email}</td>
                     <td>
                       <Link className='btn btn-outline-secondary mx-1' to={`/editUser/${user.id}`}>Edit</Link>
-                      <Link className='btn btn-outline-danger mx-1' onClick={() => deleteUser(user.id)}  >Delete</Link>
+                      <Link className='btn btn-outline-danger mx-1' onClick={() => deleteUser(user.id)}>Delete</Link>
                     </td>
                   </tr>
                 ))}
