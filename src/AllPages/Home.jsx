@@ -31,7 +31,7 @@ export default function Home() {
         <div className='py-2'>
           <table className="table rounded-3 shadow-lg mt-3 align-middle">
             <thead>
-              <tr className='h5'>
+              <tr className='h4'>
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Username</th>

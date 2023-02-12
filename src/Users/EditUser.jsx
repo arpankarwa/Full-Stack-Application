@@ -23,7 +23,7 @@ export default function EditUser() {
     const onSubmit = async (e) => {
         e.preventDefault();
         await axios.put(`http://localhost:8080/updateUser/${id}`, user);
-        console.log("user is added successfully");
+        // console.log("user details edited successfully");
         navigateTo("/");
     };
 
