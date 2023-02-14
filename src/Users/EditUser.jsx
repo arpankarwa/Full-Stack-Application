@@ -31,7 +31,8 @@ export default function EditUser() {
     }, []);
 
     const getSpecificUserData = async () => {
-      const result = await axios.get(`http://localhost:8080/updateUser/${id}`);
+      const result = await axios.get(`http://localhost:8080/updateUser/${id}`)
+      .then(console.log("data received"));
       setUser(result.data);
     };
 
